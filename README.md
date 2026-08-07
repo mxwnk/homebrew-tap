@@ -1,9 +1,10 @@
-# homebrew-flip
+# homebrew-tap
 
-A Homebrew tap for [Flip](https://github.com/mxwnk/flip), a window switcher for macOS.
+A Homebrew tap for [Flip](https://github.com/mxwnk/flip), a window switcher for
+macOS.
 
 ```sh
-brew install --cask mxwnk/flip/flip
+brew install --cask mxwnk/tap/flip
 ```
 
 Upgrades come with everything else:
