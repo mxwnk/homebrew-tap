@@ -14,7 +14,7 @@ cask "flip" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "Flip.app"
 
@@ -27,8 +27,8 @@ cask "flip" do
                    args: ["-dr", "com.apple.quarantine", "#{appdir}/Flip.app"]
   end
 
-  uninstall quit:      "dev.mxwnk.Flip",
-            launchctl: "dev.mxwnk.Flip.login"
+  uninstall launchctl: "dev.mxwnk.Flip.login",
+            quit:      "dev.mxwnk.Flip"
 
   zap trash: [
     "~/Library/Application Support/Flip",
