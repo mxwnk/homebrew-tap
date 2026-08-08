@@ -18,6 +18,11 @@ cask "flip" do
 
   app "Flip.app"
 
+  # Inside the bundle rather than beside it, so the command cannot drift from the
+  # application it drives — and in Helpers/ rather than MacOS/, because a
+  # case-insensitive volume makes `flip` there the same file as `Flip`.
+  binary "#{appdir}/Flip.app/Contents/Helpers/flip"
+
   # Flip is signed with its own certificate rather than notarised, so Gatekeeper
   # refuses the first launch, and macOS 26 no longer offers the Control-click way
   # around that. Notarising instead would change the signature that Accessibility
