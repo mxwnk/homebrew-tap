@@ -1,8 +1,8 @@
 cask "flip" do
   # Both lines are rewritten by Flip's release pipeline. Keep them on one line
   # each and in this shape, or the bump silently stops matching.
-  version "1.3.0"
-  sha256 "327a67399e2ea80f89d658cee8ee20fc175b1c53dcc30bdc50d810b51dd7fe7f"
+  version "1.4.0"
+  sha256 "da060de22ccffa32ae4d1723ac0829cb4be3fac77c32846556c2e78eb117d2d4"
 
   url "https://github.com/mxwnk/flip/releases/download/v#{version}/Flip-#{version}.dmg"
   name "Flip"
