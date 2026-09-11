@@ -27,9 +27,10 @@ cask "flip" do
   # refuses the first launch, and macOS 26 no longer offers the Control-click way
   # around that. Notarising instead would change the signature that Accessibility
   # and Screen Recording are keyed to, revoking both on every existing install.
-  postflight do
-    system_command "/usr/bin/xattr",
-                   args: ["-dr", "com.apple.quarantine", "#{appdir}/Flip.app"]
+  postflight_steps do
+    run "/usr/bin/xattr",
+        args: ["-dr", "com.apple.quarantine", "{{appdir}}/Flip.app"],
+        base: :appdir
   end
 
   uninstall launchctl: "dev.mxwnk.Flip.login",
